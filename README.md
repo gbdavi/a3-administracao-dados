@@ -5,7 +5,7 @@
 
 **Alunos:** Charles Freire Santana, Davi Gramm Bauer, Felipe Fernandes de Aquino, Joseph Bertola Leite, Patrick Azrael Silva Carvalho e Pedro Henrique Ostroski.
 
-***
+---
 
 **Tema:** analisar o impacto da dengue no Sistema Único de Saúde (SUS) e no PIB dos estados no período de 2014 a 2019.
 
