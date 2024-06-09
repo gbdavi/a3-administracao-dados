@@ -11,10 +11,27 @@
 2. Baixar os arquivos ***Leitos 20xx*** do ano de 2014 até 2019;
 3. Agrupar os arquivos em um único arquivo.
 
-### Código batch para agrupar os arquivos no windows
+### Código PowerShell para agrupar os arquivos no Windows
 
-```batch
-:: Adicionar código
+```ps1
+$outputFile = "leitos14-19.csv"
+$inputFiles = @("Leitos_2014.csv", "Leitos_2015.csv", "Leitos_2016.csv", "Leitos_2017.csv", "Leitos_2018.csv", "Leitos_2019.csv")
+$headerWritten = $false
+
+foreach ($file in $inputFiles) {
+    Write-Output "Processing $file..."
+
+    $content = Get-Content -Path $file
+
+    if (-not $headerWritten) {
+        $content | Out-File -FilePath $outputFile -Encoding utf8 -Append
+        $headerWritten = $true
+    } else {
+        $content[1..$content.Length] | Out-File -FilePath $outputFile -Encoding utf8 -Append
+    }
+}
+
+Write-Output "Merge complete! Output file: $outputFile"
 ```
 
 ## [Dados sobre o PIB do Brasil (2002 - 2021)](https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9054-contas-regionais-do-brasil.html?=&t=downloads)
