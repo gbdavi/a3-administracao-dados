@@ -33,7 +33,13 @@ Utilizaremos o Power BI para o tratamento dos dados e divulgação dos indicador
 
 ## Tratamento dos Dados
 
- Realizamos as seguintes ações nas bases de dados:
+### Tratamento para geração dos arquivos
+
+Segue [documentação para geração dos dados de consulta](DADOS.md).
+
+### Tratamento no Power BI
+
+Realizamos as seguintes ações nas bases de dados:
 
 -   **Base da Dengue:** Promovemos a primeira linha a cabeçalho, alteramos os tipos de dados nas colunas numéricas e substituímos os erros gerados na alteração de tipo de dado nas colunas numéricas por 0.
 -   **Base do PIB:** Excluímos as colunas inutilizadas, removemos os espaços desnecessários nos campos, alteramos o tipo nas colunas de PIB para numérico, removemos as primeiras linhas e algumas colunas que não tinham informações relevantes, promovemos a primeira linha a cabeçalho e renomeamos a coluna de locais.
